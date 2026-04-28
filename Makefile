@@ -72,8 +72,17 @@ install-man:
 
 	$(INSTALL_DIR) \
 	  "$(MAN_DIR)/man1"
-	rst2man \
-	  "$(_PROJECT_NPM).1.rst" \
-	  "$(MAN_DIR)/man1/$(_PROJECT_NPM).1"
+	if [[ ! -e "build" ]]; then
+	  make \
+	    build-man
+	fi
+	for _file in $(MAN_FILES); do \
+          $(_INSTALL_FILE) \
+	    "$${_file%.rst}" \
+	    "$(MAN_DIR)/man1/$${_file%.rst}"; \
+	  rst2man \
+	    "$${_file}" \
+	    "build/$${_file%.rst}"; \
+	done
 
 .PHONY: build-man install install-doc install-man
