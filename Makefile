@@ -46,6 +46,17 @@ all:
 
 install: install-doc install-man
 
+build-man:
+
+	mkdir \
+	  -p \
+	  "build"
+	for _file in $(MAN_FILES); do \
+	  rst2man \
+	    "${_file}" \
+	    "build/$${_file%.rst}"; \
+	done
+
 install-doc:
 
 	# $(INSTALL_FILE) \
