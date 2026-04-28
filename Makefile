@@ -70,11 +70,11 @@ install-doc:
 
 install-man:
 
-	$(INSTALL_DIR) \
+	$(_INSTALL_DIR) \
 	  "$(MAN_DIR)/man1"
 	if [[ ! -e "build" ]]; then
 	  make \
-	    build-man
+	    build-man; \
 	fi
 	for _file in $(MAN_FILES); do \
           $(_INSTALL_FILE) \
