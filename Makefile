@@ -42,7 +42,7 @@ _INSTALL_DIR=\
   install \
     -vdm755
 
-all:
+all: build-man
 
 install: install-doc install-man
 
@@ -76,4 +76,4 @@ install-man:
 	  "$(_PROJECT_NPM).1.rst" \
 	  "$(MAN_DIR)/man1/$(_PROJECT_NPM).1"
 
-.PHONY: install install-doc install-man
+.PHONY: build-man install install-doc install-man
