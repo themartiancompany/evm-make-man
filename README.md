@@ -24,10 +24,10 @@
 [comment]: <> (with this program.)
 [comment]: <> (If not, see <https://www.gnu.org/licenses/>.)
 
-# LibEVM manual
+# EVM Contracts Tools manual
 
-The [EVM Wallet](
-  https://github.com/themartiancompany/evm-wallet)
+The [EVM Contracts Tools](
+  https://github.com/themartiancompany/evm-contracts-tools)
 manuals.
 
 ## Installation
@@ -40,7 +40,7 @@ make \
   install
 ```
 
-The program has officially been published on the
+The tools have been published officially on the
 the uncensorable
 [Ur](
   https://github.com/themartiancompany/ur)
@@ -55,14 +55,14 @@ To install it from there just type
 
 ```bash
 ur \
-  evm-wallet
+  evm-contracts-tools
 ```
 
 A censorable HTTP Github mirror of the recipe published there,
 containing a full list of the software dependencies needed to run the
 tools is hosted on
-[evm-wallet-ur](
-  https://github.com/themartiancompany/libevm-ur).
+[evm-contracts-tools-ur](
+  https://github.com/themartiancompany/evm-contracts-tools-ur).
 Be aware the mirror could go offline any time as Github and more
 in general all HTTP resources are inherently unstable and censorable.
 
@@ -72,7 +72,7 @@ can be installed with
 ```bash
 npm \
   install \
-    evm-wallet.js
+    evm-contracts-tools
 ```
 
 ## License
