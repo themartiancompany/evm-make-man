@@ -78,11 +78,8 @@ install-man:
 	fi
 	for _file in $(MAN_FILES); do \
           $(_INSTALL_FILE) \
-	    "$${_file%.rst}" \
-	    "$(MAN_DIR)/man1/$${_file%.rst}"; \
-	  rst2man \
-	    "$${_file}" \
 	    "build/$${_file%.rst}"; \
+	    "$(MAN_DIR)/man1/$${_file%.rst}"; \
 	done
 
 .PHONY: build-man install install-doc install-man
