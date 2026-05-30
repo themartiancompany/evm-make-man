@@ -41,7 +41,7 @@ Ethereum address validator
 Synopsis
 ========
 
-ethereum-address-validate *[options]* *address*
+ethereum-address-validate *address* *[options]*
 
 
 Description
