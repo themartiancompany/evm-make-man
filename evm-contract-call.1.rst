@@ -27,9 +27,9 @@
    If not, see <https://www.gnu.org/licenses/>.
 
 
-=================
+========================
 evm-contract-call
-=================
+========================
 
 --------------------------------------------------------------
 Ethereum Virtual Machine-compatible Contract Caller
@@ -58,6 +58,7 @@ but it's also possible to directly provide seeds files.
 
 Networks
 =========
+
 All those supported by
 'evm-chains-info' as
 well as direct RPC addresses.
@@ -66,48 +67,76 @@ well as direct RPC addresses.
 Options
 =======
 
--t call_type            Static (read-only) or dynamic (read/write).
--A abi                  Contract ABI path.
--B bytecode             Contract bytecode path.
--C compiler_output      Contract compiler output
-                        path (the hardhat artifact).
--V msg_value            How much <measure_unit> attach to the
-                        transaction.
--u measure_unit         Measure unit for the transaction
-                        value. It can be 'ether' or 'wei'.
--r retries_max          Maximum number of retries before
-                        declaring the call failed.
--T call_timeout         Maximum number of seconds before
-                        declaring the call failed.
--S rpc_selection        RPC selection method. It can be
-                        'kirsh' or 'random'.
+-t call-type, --call-type type                Static (read-only) or dynamic (read/write).
+
+
+Call options
+==============
+
+-V msg-value, --msg-value value               How much *measure-unit* attach to the
+                                              transaction.
+
+-u measure-unit, --measure-unit unit          Measure unit for the transaction
+                                              value. It can be 'ether' or 'wei'.
+                                              Default value is 'ether'.
+
+-P price-gas, --price-gas price               I don't remember I have to check.
+
+-r retries-max, --retries-max retries         Maximum number of retries before
+                                              declaring the call failed.
+
+-T call-timeout --call-timeout seconds        Maximum number of seconds before
+                                              declaring the call failed.
+
+
+Contract options
+===================
+
+-A abi, --abi path                            Contract ABI path.
+
+-B bytecode, --bytecode path                  Contract bytecode path.
+
+-C compiler-output, --compiler-output path    Contract compiler output
+                                              path (the hardhat artifact).
+
+-I, --index-retrieve                          Enables retrieving contracts'
+                                              artifacts from the EVM Contracts
+                                              Source Index.
 
 
 Credentials options
 =====================
 
--N wallet_name          EVM wallet name.
--w wallet_path          EVM wallet file path.
--p wallet_path          EVM wallet password file.
--s wallet_seed          Standard 12-words seed phrase file.
--k api_key              Etherscan-like service key.
+-N wallet-name, --wallet-name name            EVM wallet name.
+
+-w wallet-path, --wallet-path path            EVM wallet file path.
+
+-p wallet-password, --wallet-password path    EVM wallet password file.
+
+-s wallet-seed, --wallet-seed path            Standard 12-words seed phrase file.
+
+-k api-key, --api-key path                    Etherscan-like service key.
 
 
 LibEVM options
 ================
 
--a                      Call authentication.
--n network              EVM network name. Accepted values
-                        are all those supported by
-                        evm-chains-info as well as RPC addresses.
+-a, --auth                                    Call authentication.
+
+-n network, --network network                 EVM network name. Accepted values
+                                              are all those supported by
+                                              evm-chains-info as well as RPC addresses.
+
+-S rpc-selection, --rpc-selection criterion   RPC selection method. It can be
+                                              'kirsh' or 'random'.
 
 
 Application options
 =====================
 
--h                      Display help.
--c                      Enable color output
--v                      Enable verbose output
+-h, --help                                    Display help.
+-c, --color                                   Enable color output
+-v, --verbose                                 Enable verbose output
 
 
 Bugs
