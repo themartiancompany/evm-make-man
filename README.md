@@ -24,10 +24,10 @@
 [comment]: <> (with this program.)
 [comment]: <> (If not, see <https://www.gnu.org/licenses/>.)
 
-# EVM Contracts Tools manual
+# EVM Make manual
 
-The [EVM Contracts Tools](
-  https://github.com/themartiancompany/evm-contracts-tools)
+The [EVM Make](
+  https://github.com/themartiancompany/evm-make)
 manuals.
 
 ## Installation
@@ -45,7 +45,7 @@ the uncensorable
 [Ur](
   https://github.com/themartiancompany/ur)
 user repository and application store as
-`libevm`.
+`evm-make`.
 The source code is published on the
 [Ethereum Virtual Machine File System](
   https://github.com/themartiancompany/evmfs)
